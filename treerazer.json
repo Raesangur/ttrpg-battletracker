@@ -1,0 +1,147 @@
+{
+	"name": "Lord of the Blasted Tarn",
+	"class": ["Treerazer"],
+	"source" : "Bestiary p.312",
+	"level": ["25"],
+	"size" : "Huge",
+	"ac": "54",
+	"hp": 550,
+	"regeneration" : 50,
+	"immunity" : ["Death effect", "Disease", "Mental", "Poison"],
+	"resistance" : ["Acid 20", "Cold 15", "Fire 15", "Physical 20 (except cold iron)"],
+	"weakness" : ["Good 20"],
+	"senses" : ["darkvision 60ft", "detect good", "detect law", "true seeing", "Perception +38"],
+	"speed" :
+	{
+		"walking" : 60,
+		"flying" : 60,
+		"swimming" : 40
+	},
+	"ability-scores" : 
+	{
+		"strenght" : "+12",
+		"dexterity" : "+9",
+		"constitution" : "+11",
+		"intelligence" : "+7",
+		"wisdom" : "+8",
+		"charisma" : "+8",
+		"fortitude": "+42",
+		"reflex" : "+40",
+		"willpower" : "+43",
+		"initiative" : "+14"
+	},
+	"skills" : ["Acrobatics +40", "Arcana +38", "Athletics +45", "Intimidation +46", "Nature +49", "Occultism +38", "Religion +45", "Stealth +40"],
+	"items" : ["Blackaxe"],
+	"languages" : ["Abyssal", "Common", "Eleven", "Sylvan", "telepathy 300ft"],
+
+	"spells" : 
+	{
+		"save" : "49",
+		"attack" : "+43",
+
+		"spells" : [
+			{
+				"name" : "telekinetic projectile",
+				"level" : "Cantrips (9th)"
+			},
+			{
+				"name" : "freedom of movement",
+				"level" : "Constant (4th)"
+			},
+			{
+				"name" : "true seeing",
+				"level" : "Constant (8th)"
+			},
+			{
+				"name" : "telekinetic maneuver",
+				"level" : "2nd"
+			},
+			{
+				"name" : "earthbind",
+				"level" : "3rd"
+			},
+			{
+				"name" : "abyssal plague",
+				"level" : "5th"
+			},
+			{
+				"name" : "tangling creepers",
+				"level" : "6th"
+			},
+			{
+				"name" : "dispel magic",
+				"level" : "9th"
+			},
+			{
+				"name" : "abyssal wrath",
+				"level" : "9th"
+			},
+			{
+				"name" : "wall of thorns",
+				"level" : "10th"
+			},
+			{
+				"name" : "time stop",
+				"level" : "10th"
+			},
+			{
+				"name" : "horrid wilting",
+				"level" : "10th"
+			}
+		]
+	},
+
+	"feats" : [
+		{
+			"name" : "Aura of Corruption",
+			"range" : "120ft",
+			"type" : ["aura", "plant", "primal", "transmutation"],
+			"description" : "Plants  near  Treerazer  twist, deform, and transform into thorny or fungoid parodies of their natural shapes. A living creature in this area must succeed at a DC {spell-save} Fortitude save each round or become partially transformed into plantlike matter. Those who fail this saving throw are  treated  as  if  they  were  plants  for  the  purposes  of  any  effect  that  particularly  harms or inconveniences plant creatures more than other creatures, but do not gain any benefits of being plant creatures. This effect lasts as long as the creature remains within the area of corruption and for 1 minute thereafter"
+		},
+		{
+			"name" : "Attack of Opportinity",
+			"time" : "{reaction}"
+		}
+	],
+
+	"actions" : [
+		{
+			"name" : "Blackaxe",
+			"time" : "{1 action}",
+			"range" : "15ft",
+			"type" : ["acid", "chaotic", "evil", "magical"],
+			"traits" : ["sweep"],
+			"hit" : "+47",
+			"source" : "Bestiary p.313",
+			"damage" : "4d12+15 slashing + 1d6 acid + 1d6 chaotic + 1d6 evil & 2d6 slashing vs plants"
+		},
+		{
+			"name" : "jaws",
+			"time" : "{1 action}",
+			"range" : "15ft",
+			"type" : ["agile", "chaotic", "evil", "magical"],
+			"damage" : "4d10+18 slashing + 2d6 chaotic + 2d6 evil"
+		},
+		{
+			"name" : "Defoliation", 
+			"time" : "{2 actions}",
+			"range" : "30ft",
+			"type" : ["primal", "necromancy", "plant"],
+			"save" : "Fortitude DC {spell-save}",
+			"damage" : "20d8 negative",
+			"description" : "Treerazer exudes a pulse of sickly green light in a 30‑foot‑radius emanation. All plants in the area (including creatures under the effect of his aura of corruption) blacken and wither. Non‑creature plants immediately wither and die. Plant creatures take 20d8 negative damage with a DC 49 basic Fortitude save. A  creature  that  fails  its  save  is  doomed  1  for  1  minute  and  sickened  3.  Treerazer  can  choose to exclude any number of plants in the area from this effect, and generally does so to preserve twisted and corrupted plants or fungi, or plant creatures that are allied to his cause. Treerazer can’t use Defoliation for 1d4 rounds"
+		},
+		{
+			"name" : "Dispelling Strike",
+			"time" : "{free}",
+			"type" : ["abjuration", "primal"],
+			"frequency" : "1/round",
+			"trigger" : "Treerazer  hits  a  creature,  object,  or  spell  effect  with  a  weapon  Strike  or  a  defoliation  attack.",
+			"description" : "Treerazer casts his innate dispel magic, targeting the creature he hit with his Strike or one spell affecting that creature"
+		},
+		{
+			"name" : "Staggering Strike",
+			"description" : "When Treerazer scores a critical hit with a melee attack, the target is stunned 2."
+		}
+	]
+}
